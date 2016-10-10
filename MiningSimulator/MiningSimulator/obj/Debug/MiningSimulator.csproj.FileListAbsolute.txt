@@ -1,0 +1,20 @@
+c:\users\131600732\documents\visual studio 2012\Projects\MiningSimulator\MiningSimulator\bin\Debug\MiningSimulator.exe.config
+c:\users\131600732\documents\visual studio 2012\Projects\MiningSimulator\MiningSimulator\bin\Debug\MiningSimulator.exe
+c:\users\131600732\documents\visual studio 2012\Projects\MiningSimulator\MiningSimulator\bin\Debug\MiningSimulator.pdb
+c:\users\131600732\documents\visual studio 2012\Projects\MiningSimulator\MiningSimulator\obj\Debug\MiningSimulator.csprojResolveAssemblyReference.cache
+c:\users\131600732\documents\visual studio 2012\Projects\MiningSimulator\MiningSimulator\obj\Debug\MiningSimulator.frmMinSim.resources
+c:\users\131600732\documents\visual studio 2012\Projects\MiningSimulator\MiningSimulator\obj\Debug\MiningSimulator.Properties.Resources.resources
+c:\users\131600732\documents\visual studio 2012\Projects\MiningSimulator\MiningSimulator\obj\Debug\MiningSimulator.csproj.GenerateResource.Cache
+c:\users\131600732\documents\visual studio 2012\Projects\MiningSimulator\MiningSimulator\obj\Debug\MiningSimulator.exe
+c:\users\131600732\documents\visual studio 2012\Projects\MiningSimulator\MiningSimulator\obj\Debug\MiningSimulator.pdb
+C:\Users\Matthew John Pearce\Documents\Visual Studio 2015\Projects\MiningSimulator\MiningSimulator\bin\Debug\MiningSimulator.exe.config
+C:\Users\Matthew John Pearce\Documents\Visual Studio 2015\Projects\MiningSimulator\MiningSimulator\obj\Debug\MiningSimulator.exe
+C:\Users\Matthew John Pearce\Documents\Visual Studio 2015\Projects\MiningSimulator\MiningSimulator\obj\Debug\MiningSimulator.pdb
+C:\Users\Matthew John Pearce\Documents\Visual Studio 2015\Projects\MiningSimulator\MiningSimulator\bin\Debug\MiningSimulator.exe
+C:\Users\Matthew John Pearce\Documents\Visual Studio 2015\Projects\MiningSimulator\MiningSimulator\bin\Debug\MiningSimulator.pdb
+C:\Users\Matthew John Pearce\Documents\Visual Studio 2015\Projects\MiningSimulator\MiningSimulator\obj\Debug\MiningSimulator.csprojResolveAssemblyReference.cache
+C:\Users\Matthew John Pearce\Documents\Visual Studio 2015\Projects\MiningSimulator\MiningSimulator\obj\Debug\MiningSimulator.frmMinSim.resources
+C:\Users\Matthew John Pearce\Documents\Visual Studio 2015\Projects\MiningSimulator\MiningSimulator\obj\Debug\MiningSimulator.Properties.Resources.resources
+C:\Users\Matthew John Pearce\Documents\Visual Studio 2015\Projects\MiningSimulator\MiningSimulator\obj\Debug\MiningSimulator.csproj.GenerateResource.Cache
+C:\Users\131600732\Documents\Visual Studio 2012\Projects\MiningSimulator\MiningSimulator\bin\Debug\MiningSimulator.XML
+C:\Users\Matthew John Pearce\Documents\Visual Studio 2015\Projects\MiningSimulator\MiningSimulator\bin\Debug\MiningSimulator.XML

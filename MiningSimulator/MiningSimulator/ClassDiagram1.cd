@@ -1,0 +1,69 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<ClassDiagram MajorVersion="1" MinorVersion="1">
+  <Class Name="MiningSimulator.frmMinSim">
+    <Position X="0.5" Y="0.5" Width="1.5" />
+    <Members>
+      <Field Name="chID" Hidden="true" />
+      <Field Name="chStatus" Hidden="true" />
+      <Field Name="components" Hidden="true" />
+      <Method Name="Dispose" Hidden="true" />
+      <Field Name="exitToolStripMenuItem" Hidden="true" />
+      <Field Name="fileToolStripMenuItem" Hidden="true" />
+      <Method Name="frmMinSim" Hidden="true" />
+      <Field Name="groupBox1" Hidden="true" />
+      <Field Name="groupBox2" Hidden="true" />
+      <Method Name="InitializeComponent" Hidden="true" />
+      <Field Name="label1" Hidden="true" />
+      <Field Name="label2" Hidden="true" />
+      <Field Name="label3" Hidden="true" />
+      <Field Name="label4" Hidden="true" />
+      <Field Name="label5" Hidden="true" />
+      <Field Name="label6" Hidden="true" />
+      <Field Name="label7" Hidden="true" />
+      <Field Name="menuStrip1" Hidden="true" />
+      <Field Name="rbCrusher" Hidden="true" />
+      <Field Name="rbInactive" Hidden="true" />
+      <Field Name="rbLoading" Hidden="true" />
+      <Field Name="rbService" Hidden="true" />
+      <Field Name="rbTranLoad" Hidden="true" />
+      <Field Name="rbTransCrush" Hidden="true" />
+      <Field Name="tbLoadCapacity" Hidden="true" />
+      <Field Name="tbTotal" Hidden="true" />
+      <Field Name="tbTruckID" Hidden="true" />
+      <Field Name="toolTip1" Hidden="true" />
+      <Field Name="trkMAX" Hidden="true" />
+      <Field Name="userGuideToolStripMenuItem" Hidden="true" />
+    </Members>
+    <TypeIdentifier>
+      <HashCode>JYDAQAADQCIAELDAgIDDgEAriEkYgIYmhCACQkADRAA=</HashCode>
+      <FileName>MiningSim.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="MiningSimulator.Program" Collapsed="true">
+    <Position X="2.25" Y="0.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAABAAAAAA=</HashCode>
+      <FileName>Program.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="MiningSimulator.Trucks">
+    <Position X="4.25" Y="1.25" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>ACQABBABAAAQCRAABAIgAAAAACAAAAAAAEAAAQAAgAg=</HashCode>
+      <FileName>Trucks.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="MiningSimulator.Properties.Resources">
+    <Position X="11.75" Y="1.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAABEAAAAQAAAAAAAAAAAAAAAIA=</HashCode>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="MiningSimulator.Properties.Settings" Collapsed="true">
+    <Position X="9.75" Y="2.25" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAIAAAAAABAAAAAAAAAAAAAAA=</HashCode>
+    </TypeIdentifier>
+  </Class>
+  <Font Name="Segoe UI" Size="9" />
+</ClassDiagram>

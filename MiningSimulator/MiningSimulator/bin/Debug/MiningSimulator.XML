@@ -1,0 +1,288 @@
+<?xml version="1.0"?>
+<doc>
+    <assembly>
+        <name>MiningSimulator</name>
+    </assembly>
+    <members>
+        <member name="T:MiningSimulator.frmMinSim">
+            <summary>
+            The main form of the Mining Simulator program
+            </summary>
+        </member>
+        <member name="M:MiningSimulator.frmMinSim.#ctor">
+            <summary>
+            Methods that are called whenthe program is started
+            </summary>
+        </member>
+        <member name="F:MiningSimulator.frmMinSim.fLoad">
+            <summary>
+            Bool field varaible used while trucks are being pulled from the Binary
+            file.
+            </summary>
+        </member>
+        <member name="F:MiningSimulator.frmMinSim.trkMAX">
+            <summary>
+            Integers to determine the max length for the arrays
+            </summary>
+        </member>
+        <member name="F:MiningSimulator.frmMinSim.truck">
+            <summary>
+            Creating an Array to store Trucks
+            </summary>
+        </member>
+        <member name="M:MiningSimulator.frmMinSim.InitializeTrucks">
+            <summary>
+            Initializing the Trucks Arrray by adding 20 trucks with unique identifier
+            </summary>
+        </member>
+        <member name="F:MiningSimulator.frmMinSim.allQ">
+            <summary>
+            Create an Array for Queues
+            </summary>
+        </member>
+        <member name="M:MiningSimulator.frmMinSim.InitializeQueue">
+            <summary>
+            Filling the Queue Array
+            </summary>
+        </member>
+        <member name="M:MiningSimulator.frmMinSim.DisplayInfo">
+            <summary>
+            Method that displays all the trucks from the Array into the List View
+            </summary>
+        </member>
+        <member name="M:MiningSimulator.frmMinSim.UpdateDetails(MiningSimulator.Trucks)">
+            <summary>
+            Displays the details of the specific truck instance by calling the Trucks 
+            class and putting the data into the appropiate text boxes and selects the
+            corresponding radiobutton
+            </summary>
+            <param name="trk"></param>
+        </member>
+        <member name="M:MiningSimulator.frmMinSim.UpdateQue(MiningSimulator.Trucks)">
+            <summary>
+            Moves text from one listbox to another depending on the trucks status
+            </summary>
+            <param name="trk"></param>
+        </member>
+        <member name="M:MiningSimulator.frmMinSim.ServiceUpdate(MiningSimulator.Trucks)">
+            <summary>
+            Puts trucks into the Service Listbox from the Queue 1 and 4, and removes 
+            any other text associated with the specific truck, also resets the Queue 
+            pointer.
+            </summary>
+            <param name="trk"></param>
+        </member>
+        <member name="M:MiningSimulator.frmMinSim.TransQue(MiningSimulator.Trucks)">
+            <summary>
+            Checks if the class objects loadded from the binary file are going to 
+            be serviced.Then checks what the Trucks status is to determine which 
+            Queue it will go in or if the truck needs to be serviced. When put into
+            the third queue the truck increments its load.
+            </summary>
+            <param name="trk"></param>
+        </member>
+        <member name="M:MiningSimulator.frmMinSim.DeQue(System.Int32)">
+            <summary>
+            Deque a truck object from the Que associated with the input parameter
+            </summary>
+            <param name="i"></param>
+        </member>
+        <member name="M:MiningSimulator.frmMinSim.ListQue(MiningSimulator.Trucks,System.Int32)">
+            <summary>
+            Gets the specified truck and gives it a unique number derived from the 
+            Queue itsin so it can be put back into the Queue when loaded from binary 
+            file
+            </summary>
+            <param name="trk"></param>
+            <param name="i"></param>
+        </member>
+        <member name="M:MiningSimulator.frmMinSim.UpdateListQue(System.Int32)">
+            <summary>
+            Updates the queue pointer for each truck in the specified queue
+            </summary>
+            <param name="x"></param>
+        </member>
+        <member name="M:MiningSimulator.frmMinSim.SaveFile">
+            <summary>
+            Creates a binary file and writes the trucks ID, status, total, if its 
+            going to be serviced and where in the Queue it belongs
+            </summary>
+        </member>
+        <member name="M:MiningSimulator.frmMinSim.LoadFile">
+            <summary>
+            Opens binary file a puts data from the file into the Trucks Array. It is 
+            then sorted by the gsQuePtr field so that each truck gets put back into 
+            the Queue in the correct order. The Array is then reorderd back and 
+            displayed from truck 100 - 119
+            </summary>
+        </member>
+        <member name="M:MiningSimulator.frmMinSim.AddToService">
+            <summary>
+            Adds a truck to the service listbox or tags the truck to be serviced after
+            dumping its next load
+            </summary>
+        </member>
+        <member name="M:MiningSimulator.frmMinSim.RemoveFromService">
+            <summary>
+            Removes the selected truch from the Service Listbox
+            </summary>
+        </member>
+        <member name="M:MiningSimulator.frmMinSim.MoveToInactive">
+            <summary>
+            Removes the selected truc from the workforce when its load has been 
+            emptied
+            </summary>
+        </member>
+        <member name="M:MiningSimulator.frmMinSim.lvAllTrucks_MouseClick(System.Object,System.Windows.Forms.MouseEventArgs)">
+            <summary>
+            Displays the selected trucks' details into the appropiate textboxes and
+            radio buttons
+            </summary>
+            <param name="sender"></param>
+            <param name="e"></param>
+        </member>
+        <member name="M:MiningSimulator.frmMinSim.lvAllTrucks_MouseDoubleClick(System.Object,System.Windows.Forms.MouseEventArgs)">
+            <summary>
+            Puts the selected truck into the the first Queue if is not already in one
+            </summary>
+            <param name="sender"></param>
+            <param name="e"></param>
+        </member>
+        <member name="M:MiningSimulator.frmMinSim.btnService_Click(System.Object,System.EventArgs)">
+            <summary>
+            Adds truck to Service Listbox
+            </summary>
+            <param name="sender"></param>
+            <param name="e"></param>
+        </member>
+        <member name="M:MiningSimulator.frmMinSim.lbInService_MouseDoubleClick(System.Object,System.Windows.Forms.MouseEventArgs)">
+            <summary>
+            Puts truck into next Queue
+            </summary>
+            <param name="sender"></param>
+            <param name="e"></param>
+        </member>
+        <member name="M:MiningSimulator.frmMinSim.btnInactive_Click(System.Object,System.EventArgs)">
+            <summary>
+            Removes truck from workforce
+            </summary>
+            <param name="sender"></param>
+            <param name="e"></param>
+        </member>
+        <member name="M:MiningSimulator.frmMinSim.lbTransLoad_MouseClick(System.Object,System.Windows.Forms.MouseEventArgs)">
+            <summary>
+            Puts truck into next Queue
+            </summary>
+            <param name="sender"></param>
+            <param name="e"></param>
+        </member>
+        <member name="M:MiningSimulator.frmMinSim.lbLoadQue_MouseClick(System.Object,System.Windows.Forms.MouseEventArgs)">
+            <summary>
+            Puts truck into next Queue
+            </summary>
+            <param name="sender"></param>
+            <param name="e"></param>
+        </member>
+        <member name="M:MiningSimulator.frmMinSim.lbTransCrush_MouseClick(System.Object,System.Windows.Forms.MouseEventArgs)">
+            <summary>
+            Puts truck into next Queue
+            </summary>
+            <param name="sender"></param>
+            <param name="e"></param>
+        </member>
+        <member name="M:MiningSimulator.frmMinSim.lbCrushQue_MouseClick(System.Object,System.Windows.Forms.MouseEventArgs)">
+            <summary>
+            Puts truck into next Queue
+            </summary>
+            <param name="sender"></param>
+            <param name="e"></param>
+        </member>
+        <member name="M:MiningSimulator.frmMinSim.frmMinSim_FormClosing(System.Object,System.Windows.Forms.FormClosingEventArgs)">
+            <summary>
+            Saves the Truck Array when the program is closed
+            </summary>
+            <param name="sender"></param>
+            <param name="e"></param>
+        </member>
+        <member name="M:MiningSimulator.frmMinSim.exitToolStripMenuItem_Click(System.Object,System.EventArgs)">
+            <summary>
+            Exits and saves the program
+            </summary>
+            <param name="sender"></param>
+            <param name="e"></param>
+        </member>
+        <member name="M:MiningSimulator.frmMinSim.userGuideToolStripMenuItem_Click(System.Object,System.EventArgs)">
+            <summary>
+            Opens the user guide
+            </summary>
+            <param name="sender"></param>
+            <param name="e"></param>
+        </member>
+        <member name="F:MiningSimulator.frmMinSim.components">
+            <summary>
+            Required designer variable.
+            </summary>
+        </member>
+        <member name="M:MiningSimulator.frmMinSim.Dispose(System.Boolean)">
+            <summary>
+            Clean up any resources being used.
+            </summary>
+            <param name="disposing">true if managed resources should be disposed; otherwise, false.</param>
+        </member>
+        <member name="M:MiningSimulator.frmMinSim.InitializeComponent">
+            <summary>
+            Required method for Designer support - do not modify
+            the contents of this method with the code editor.
+            </summary>
+        </member>
+        <member name="M:MiningSimulator.Program.Main">
+            <summary>
+            The main entry point for the application.
+            </summary>
+        </member>
+        <member name="F:MiningSimulator.Trucks.truckID">
+            <summary>
+            Truck Fields
+            </summary>
+        </member>
+        <member name="P:MiningSimulator.Trucks.gCapacity">
+            <summary>
+            Accessor Methods
+            </summary>
+        </member>
+        <member name="M:MiningSimulator.Trucks.QuePointerUpdate">
+            <summary>
+            Updates where the truck is within the queue.
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:MiningSimulator.Trucks.IncrementTotal">
+            <summary>
+            Increments the trucks total load that it has picked up
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:MiningSimulator.Trucks.StsUpdate">
+            <summary>
+            Changes the current status of the truck as it changes Queues or goes to Servicing
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="T:MiningSimulator.Properties.Resources">
+            <summary>
+              A strongly-typed resource class, for looking up localized strings, etc.
+            </summary>
+        </member>
+        <member name="P:MiningSimulator.Properties.Resources.ResourceManager">
+            <summary>
+              Returns the cached ResourceManager instance used by this class.
+            </summary>
+        </member>
+        <member name="P:MiningSimulator.Properties.Resources.Culture">
+            <summary>
+              Overrides the current thread's CurrentUICulture property for all
+              resource lookups using this strongly typed resource class.
+            </summary>
+        </member>
+    </members>
+</doc>
