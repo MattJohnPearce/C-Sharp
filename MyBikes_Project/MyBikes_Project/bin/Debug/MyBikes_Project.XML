@@ -1,0 +1,327 @@
+<?xml version="1.0"?>
+<doc>
+    <assembly>
+        <name>MyBikes_Project</name>
+    </assembly>
+    <members>
+        <member name="T:MyBikes_Project.frmMyBikes">
+            <summary>
+            Name: Matthew Pearce
+            StudentID: 131600732
+            Date: 25 March 2016
+            AT2-Project: My Bike Collection
+            Version 1.00
+            
+            This program allows user to add, update or delete motobikes to and from a list.The list can then be saved,
+            either from a save button or on exit, to an XML file named 'bikes.xml'. A user guide is provided in the help 
+            menu. When a user clicks on an item in the list all fields are then displayed into their appropriate textboxes
+            </summary>
+        </member>
+        <member name="M:MyBikes_Project.frmMyBikes.#ctor">
+            <summary>
+            Initialize forms components
+            </summary>
+        </member>
+        <member name="F:MyBikes_Project.frmMyBikes.myBikes">
+            <summary>
+            Creates a new ListArray to store bikes based on the class 'Bikes'
+            </summary>
+        </member>
+        <member name="F:MyBikes_Project.frmMyBikes.waterMarkOn">
+            <summary>
+            Public variables declared and intialized
+            </summary>
+        </member>
+        <member name="T:MyBikes_Project.frmMyBikes.Bikes">
+            <summary>
+            Creates class bikes with each field for bike information and a compare method that sorts Bikes by 'model' field.
+            </summary>
+        </member>
+        <member name="P:MyBikes_Project.frmMyBikes.Bikes.make">
+            <summary>
+            References the make or manufacturer of the bike
+            </summary>
+        </member>
+        <member name="P:MyBikes_Project.frmMyBikes.Bikes.model">
+            <summary>
+            Model of the bike (there can be only one)
+            </summary>
+        </member>
+        <member name="P:MyBikes_Project.frmMyBikes.Bikes.size">
+            <summary>
+            Engine size of the bike will automatcially display the symbol 'cc'
+            </summary>
+        </member>
+        <member name="P:MyBikes_Project.frmMyBikes.Bikes.year">
+            <summary>
+            The user can not type anymore than 4 numbers for this field
+            </summary>
+        </member>
+        <member name="P:MyBikes_Project.frmMyBikes.Bikes.cost">
+            <summary>
+            The cost of the bike will display a '$' sign in front of user input
+            </summary>
+        </member>
+        <member name="M:MyBikes_Project.frmMyBikes.Bikes.CompareTo(MyBikes_Project.frmMyBikes.Bikes)">
+            <summary>
+            Used to sort the bikes by their Model name
+            </summary>
+            <param name="other"></param>
+            <returns></returns>
+        </member>
+        <member name="M:MyBikes_Project.frmMyBikes.frmMyBikes_Load(System.Object,System.EventArgs)">
+            <summary>
+            As the form loads it looks for an XML File data and displays data via ListView, tooltips and satusbar.
+            IF 'bikes.xml' does not exist it is created, ELSE the data from the xml file is loaded into the ListArray.
+            ListArray is then saved to a temporary xml and data is displayed into the listview. Tooltips for textboxes 
+            labels and buttons are loaded. Finally a status message is displayed telling the user how many items are
+             in the ListArray.
+            </summary>
+            <param name="sender"></param>
+            <param name="e"></param>
+        </member>
+        <member name="M:MyBikes_Project.frmMyBikes.lvwBikeDetails_MouseClick(System.Object,System.Windows.Forms.MouseEventArgs)">
+            <summary>
+            When a user clicks on a bike that is listed in the ListView the details for that bike are displayed into their
+            corresponding textboxes.
+            </summary>
+            <param name="sender"></param>
+            <param name="e"></param>
+        </member>
+        <member name="M:MyBikes_Project.frmMyBikes.btnAdd_Click(System.Object,System.EventArgs)">
+            <summary>
+            Clicking the Add button adds a bike to the list by calling AddBike() method.
+            </summary>
+            <param name="sender"></param>
+            <param name="e"></param>
+        </member>
+        <member name="M:MyBikes_Project.frmMyBikes.btnDelete_Click(System.Object,System.EventArgs)">
+            <summary>
+            Deletes a bike from the list by calling the DeleteBike() method
+            </summary>
+            <param name="sender"></param>
+            <param name="e"></param>
+        </member>
+        <member name="M:MyBikes_Project.frmMyBikes.btnUpdate_Click(System.Object,System.EventArgs)">
+            <summary>
+             Updates changes to any of the bike details the user has editied by calling the RunUpdate() method
+            </summary>
+            <param name="sender"></param>
+            <param name="e"></param>
+        </member>
+        <member name="M:MyBikes_Project.frmMyBikes.btnSave_Click(System.Object,System.EventArgs)">
+            <summary>
+            Clicking the Save button calls the 'SaveList' method.
+            </summary>
+            <param name="sender"></param>
+            <param name="e"></param>
+        </member>
+        <member name="M:MyBikes_Project.frmMyBikes.btnClear_Click(System.Object,System.EventArgs)">
+            <summary>
+             Clicking the Clear button watermarks all the texboxes by calling ResetFields().
+            </summary>
+            <param name="sender"></param>
+            <param name="e"></param>
+        </member>
+        <member name="M:MyBikes_Project.frmMyBikes.frmMyBikes_FormClosing(System.Object,System.Windows.Forms.FormClosingEventArgs)">
+            <summary>
+            When the user clicks on the X in the corner of the application is clicked IF the 'OnExit' has not been called
+            before then 'exitBikes' boolean value should be false and the 'OnExit' method is called which changes the 
+            'exitBikes' variable to TRUE, this code prevents 'OnExit' been called twice. IF 'OnExit' has been called but
+            the application has not closed then user has cancelled the event making the 'cancelExit' varaible TRUE but this
+            boolean variable needs to be reset to FALSE so the user is able to cancel the event again.
+            </summary>
+            <param name="sender"></param>
+            <param name="e"></param>
+        </member>
+        <member name="M:MyBikes_Project.frmMyBikes.mnuUserGuide_Click(System.Object,System.EventArgs)">
+            <summary>
+            Opens the user guide for the application
+            </summary>
+            <param name="sender"></param>
+            <param name="e"></param>
+        </member>
+        <member name="M:MyBikes_Project.frmMyBikes.mnuSave_Click(System.Object,System.EventArgs)">
+            <summary>
+            Clicking save in the file menu saves the list
+            </summary>
+            <param name="sender"></param>
+            <param name="e"></param>
+        </member>
+        <member name="M:MyBikes_Project.frmMyBikes.mnuExit_Click(System.Object,System.EventArgs)">
+            <summary>
+            mnuExit_Click is similar to closing the form but canceling in this instance only changes the varaible 'cancelExit'
+            back to FALSE
+            </summary>
+            <param name="sender"></param>
+            <param name="e"></param>
+        </member>
+        <member name="M:MyBikes_Project.frmMyBikes.ToolTipSect">
+            <summary>
+            The tooltips were put into their own method to make the code in the frmMyBikes_Load shorter and easier
+            to read
+            </summary>
+        </member>
+        <member name="M:MyBikes_Project.frmMyBikes.CreateXml">
+            <summary>
+            Creates the Xml file that is used to store data from the ListArray by declaring a new instance of XmlWriter 
+            and creates the 'bikes.xml' file it then ensures future data will be encoded so it can be read as an xml file.
+            </summary>
+        </member>
+        <member name="M:MyBikes_Project.frmMyBikes.ReadXml``1(System.String)">
+            <summary>
+            TRY to read Xml file where specified (fileName) using the StreamReader on file and  then deserializes or 
+            unencodes xml data within file can be RETURNED into the  ArrayList and in turn the ListView, FINALLY if 
+            either the file or nothing is found StreamReader is closed.
+            </summary>
+            <typeparam name="T"></typeparam>
+            <param name="filePath"></param>
+            <returns></returns>
+        </member>
+        <member name="M:MyBikes_Project.frmMyBikes.TempSave">
+            <summary>
+            This method saves a temporary xml file ('temp.xml') which is used later to check if the user has made any
+            changes to the ListArray since the last time it was saved to 'bikes.xml'.
+            </summary>
+        </member>
+        <member name="M:MyBikes_Project.frmMyBikes.DisplayInfo">
+            <summary>
+            Method to display each item from the ArrayList into the ListView.
+            </summary>
+        </member>
+        <member name="M:MyBikes_Project.frmMyBikes.ResetFields">
+            <summary>
+            Resets the texboxes back to their default style by using a water marking method for each textbox.
+            </summary>
+        </member>
+        <member name="M:MyBikes_Project.frmMyBikes.UpdateBike">
+            <summary>
+            This method allows users to update details from the selected item in the ListView each text box to a new
+            instance of the 'Bikes' class. Then the updated item is loaded back into the ListArray. For tbSize.Text
+            and tbCost.Text IF do not have they already have symbols representing the data for their particular field
+            then it is added. The fields are then resetted, the ListArray is sorted, items are redisplayed in the
+            ListView, temporary xml file saved and a status message is displayed.
+            </summary>
+        </member>
+        <member name="M:MyBikes_Project.frmMyBikes.RunUpdate">
+            <summary>
+            Method checks IF the user has not selected an item from the ListView a error message is shown otherwise the
+            selected item checks whether the data in 'model' field has been changed by comparing the item from 'myBikes'
+            Array with the text from 'tbModel'. IF there is a difference the 'myBikes' Array is checked for duplicates 
+            and IF there are none the 'UpdateBike' method is called, ELSE an error message is shown.
+            </summary>
+        </member>
+        <member name="M:MyBikes_Project.frmMyBikes.CheckSave">
+            <summary>
+            Method to check if the 'bikes.xml' needs saving. Compares the differences between the 'temp.xml' and 
+            'bikes.xml'. IF there is or is not any  differences between them the 'alreadySaved' boolean value is 
+            changed accordingly.
+            </summary>
+        </member>
+        <member name="M:MyBikes_Project.frmMyBikes.SaveList">
+            <summary>
+            Method that calls CheckSave method and IF 'alreadySaved' is TRUE then a message is displayed informing the 
+            user that saving is not necessary, ELSE the CreateXml method is called and a status message is displayed.
+            </summary>
+        </member>
+        <member name="M:MyBikes_Project.frmMyBikes.AddBike">
+            <summary>
+            Method AddBike takes what the user has typed into the textboxes and puts the data into a new instance
+            of the 'Bikes' class called 'newBike'. The button event also determines whether or not the user has typed any
+            data into the textboxes. For 'tbMake' and 'tbModel' there has to be data inputted (apart from the watermark
+            text). The other textboxes do not need data but IF none is entered the watermark text is removed. IF data is
+            entered for 'tbSize and 'tbCost' symboys are added to the data. To prevent the user from adding models that are
+            already in the list, 'myBikes' is checked for models with the same name and the result (either TRUE or FALSE) is
+            put into the 'duplicateModel' boolean variable. IF not found all items that was addeded into the new class gets
+            put into 'myBikes' Array, The fields are then resetted, the ListArray is sorted, items are displayed in the
+            ListView, temporary xml file saved and a status message is displayed.
+            </summary>
+        </member>
+        <member name="M:MyBikes_Project.frmMyBikes.DeleteBike">
+            <summary>
+            IF the user has not selected an item from the ListView a error message is shown otherwise a dialogbox apperars 
+            asking to confirm the users actions, IF yes is selected that item is removed from 'myBikes' Array. Then the 
+            ListView and 'temp.xml' file is updated and a status message is displayed
+            </summary>
+        </member>
+        <member name="M:MyBikes_Project.frmMyBikes.OnExit">
+            <summary>
+            This method is setup to allow the user to either save or not save their work before closing or not close the
+            application at all. The CheckSave method is called to determine if the user has saved their work and IF not
+            a dialog box ask them if they want to save. The 'exitBikes' boolean variable is used to prevent the dialog box 
+            from repeating when activated. IF yes is selected from the user the SaveList method is called and then 
+            application is closed, IF no the application is closed and IF cancel is selected the application does returns
+            to frmMyBikes and changes the boolean 'cancelExit' is used in case the user wants to cancel exiting the
+            application a second time, without out the dialog box will not disappear.IF the user has saved before exiting 
+            a similar dialog box will appear without the save option.
+            </summary>
+        </member>
+        <member name="M:MyBikes_Project.frmMyBikes.MakeWM">
+            <summary>
+            This method displays the default text as gray and italic unless its called upon while the user is typing 
+            into a textbox.
+            </summary>
+        </member>
+        <member name="M:MyBikes_Project.frmMyBikes.tbMake_TextChanged(System.Object,System.EventArgs)">
+            <summary>
+            When the user types the default watermark text reverts back to standand black and normal font by calling
+            the MakeWM() method
+            </summary>
+            <param name="sender"></param>
+            <param name="e"></param>
+        </member>
+        <member name="M:MyBikes_Project.frmMyBikes.tbMake_Click(System.Object,System.EventArgs)">
+            <summary>
+            Selects all text currently in a text box which is used to clear the default watermark text as the user types
+            </summary>
+            <param name="sender"></param>
+            <param name="e"></param>
+        </member>
+        <member name="M:MyBikes_Project.frmMyBikes.tbSize_KeyPress(System.Object,System.Windows.Forms.KeyPressEventArgs)">
+            <summary>
+            This section blocks the user from typing in IF anything but numbers for tbSize, tbYear and tbCost, 
+            apart from numbers the arrow keys and back space can be used
+            </summary>
+            <param name="sender"></param>
+            <param name="e"></param>
+        </member>
+        <member name="F:MyBikes_Project.frmMyBikes.components">
+            <summary>
+            Required designer variable.
+            </summary>
+        </member>
+        <member name="M:MyBikes_Project.frmMyBikes.Dispose(System.Boolean)">
+            <summary>
+            Clean up any resources being used.
+            </summary>
+            <param name="disposing">true if managed resources should be disposed; otherwise, false.</param>
+        </member>
+        <member name="M:MyBikes_Project.frmMyBikes.InitializeComponent">
+            <summary>
+            Required method for Designer support - do not modify
+            the contents of this method with the code editor.
+            </summary>
+        </member>
+        <member name="M:MyBikes_Project.Program.Main">
+            <summary>
+            The main entry point for the application.
+            </summary>
+        </member>
+        <member name="T:MyBikes_Project.Properties.Resources">
+            <summary>
+              A strongly-typed resource class, for looking up localized strings, etc.
+            </summary>
+        </member>
+        <member name="P:MyBikes_Project.Properties.Resources.ResourceManager">
+            <summary>
+              Returns the cached ResourceManager instance used by this class.
+            </summary>
+        </member>
+        <member name="P:MyBikes_Project.Properties.Resources.Culture">
+            <summary>
+              Overrides the current thread's CurrentUICulture property for all
+              resource lookups using this strongly typed resource class.
+            </summary>
+        </member>
+    </members>
+</doc>
